@@ -1,0 +1,37 @@
+name:                PalindromeString
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/githubuser/PalindromeString#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Author name here
+maintainer:          example@example.com
+copyright:           2019 Author name here
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+executable PalindromeString
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+  other-modules:       Solution
+
+library Solution
+  exposed-modules:     Solution
+  -- other-modules:
+  -- other-extensions:
+  build-depends:       base >= 4.7 && < 5
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+
+test-suite unit-tests
+  hs-source-dirs: test/unit-tests
+  main-is:       Spec.hs
+  type:          exitcode-stdio-1.0
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5, hspec, Solution
+  other-modules:    SolutionSpec
